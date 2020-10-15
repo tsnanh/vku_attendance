@@ -2,6 +2,7 @@ import { routerMiddleware } from "react-router-redux";
 import createHistory from "history/createBrowserHistory";
 import { applyMiddleware, createStore } from "@reduxjs/toolkit";
 import { createLogger } from "redux-logger";
+import reducers from "./reducer";
 
 export const history = createHistory();
 const myRouterMiddleware = routerMiddleware(history);
@@ -15,5 +16,5 @@ const getMiddleware = () => {
 };
 
 export const store = createStore(
-    reducer
+    reducers
 )
