@@ -1,3 +1,13 @@
+import { Teacher } from "../../models/Teacher";
+
 export interface HomeState {
-  users: 
+	readonly teachers?: Teacher[];
+	readonly isFetching: boolean;
+	readonly error?: any;
+}
+
+export interface HomeAction {
+	type: string;
+	teachers?: Teacher[];
+	error?: any;
 }
