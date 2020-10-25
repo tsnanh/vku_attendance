@@ -1,6 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import homeReducer from "./reducers/Home";
+import teacherReducer from "./reducers/Teacher";
+import backlogReducer from "./reducers/Backlog";
+import machineReducer from "./reducers/Machine";
 
 export default combineReducers({
-    "home": homeReducer
+	teacher: teacherReducer,
+	backlog: backlogReducer,
+	machine: machineReducer,
 });

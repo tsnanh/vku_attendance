@@ -1,14 +1,14 @@
-export interface Teacher {
-	inMachine: InMachine,
-	profile: Profile,
-	email: string
-}
+export type Teacher = {
+	inMachine: InMachine;
+	profile: Profile;
+	email: string;
+};
 
-interface InMachine {
-	uid: Number
-}
+export type InMachine = {
+	uid: Number;
+};
 
-interface Profile {
-	name: string,
-	cardId: string
-}
+export type Profile = {
+	name: string;
+	cardId: string;
+};

@@ -10,7 +10,7 @@ const initialState: HomeState = {
 	teachers: [],
 };
 
-export default function homeReducer(
+export default function teacherReducer(
 	state = initialState,
 	action: HomeAction
 ): HomeState {
