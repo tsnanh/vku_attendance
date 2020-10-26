@@ -37,7 +37,7 @@ export function fetchBacklogsFromDb() {
 				(obj: any) => obj as Backlog
 			);
 			dispatch(fetchBacklogsSuccess(backlogs));
-		} catch (e: any) {
+		} catch (e) {
 			dispatch(fetchBacklogsFailed(e));
 		}
 	};

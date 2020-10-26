@@ -31,6 +31,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Switch, Route, Link } from "react-router-dom";
 import { fetchTeachersFromMachine } from "../../reducers/Teacher/teacherActions";
 import { HomeState } from "../../reducers/Teacher/types";
+import TeacherFragment from "../Teacher";
 
 const drawerWidth = 240;
 
@@ -113,6 +114,10 @@ const useStyles = makeStyles((theme: Theme) =>
 					width: "20ch",
 				},
 			},
+		},
+		link: {
+			textDecoration: "none",
+			color: theme.palette.text.primary,
 		},
 	})
 );
@@ -198,7 +203,7 @@ export default function Home(props: any) {
 					<Divider />
 					<List>
 						{["Teachers", "Backlogs"].map((text, index) => (
-							<Link to={`/${text.toLowerCase()}`}>
+							<Link to={`/${text.toLowerCase()}`} className={classes.link}>
 								<ListItem button key={text}>
 									<ListItemIcon>
 										{index % 2 !== 0 ? <Group /> : <FormatListNumbered />}
@@ -212,7 +217,15 @@ export default function Home(props: any) {
 			</Drawer>
 			<main className={classes.content}>
 				<Toolbar />
-				<Switch></Switch>
+				<Switch>
+					<Route exact path="/teachers">
+						<TeacherFragment
+							showSnackbar={showSnackbar}
+							handleSnackbarClose={handleSnackbarClose}
+						/>
+					</Route>
+					<Route exact path="/backlogs"></Route>
+				</Switch>
 			</main>
 		</div>
 	);

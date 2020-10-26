@@ -36,7 +36,7 @@ export function setCurrentTimeOnMachine() {
 			);
 			const message = response.data;
 			dispatch(setMachineTimeSuccess(message));
-		} catch (e: any) {
+		} catch (e) {
 			dispatch(setMachineTimeFailed(e));
 		}
 	};
