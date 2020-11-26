@@ -1,14 +1,14 @@
 export type Teacher = {
-	inMachine: InMachine;
-	profile: Profile;
-	email: string;
+  inMachine: InMachine;
+  profile: Profile;
 };
 
 export type InMachine = {
-	uid: Number;
+  uid: number;
 };
 
 export type Profile = {
-	name: string;
-	cardId: string;
+  name: string;
+  cardId: string;
+  email: string;
 };
